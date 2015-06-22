@@ -17,13 +17,13 @@ get_header(); ?>
             </ul>    
         </div>
 
-        <div class="slidingIcons">
+        <div class="slidingIcons flex-container">
             <ul>
-                <li class="iconBox icon1"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
-                <li class="iconBox icon2"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
-                <li class="iconBox icon3"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
-                <li class="iconBox icon4"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
-                <li class="iconBox icon5"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
+                <li class="iconBox icon1 flex1"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
+                <li class="iconBox icon2 flex1"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
+                <li class="iconBox icon3 flex1"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
+                <li class="iconBox icon4 flex1"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
+                <li class="iconBox icon5 flex1"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/05/tools_256px.png'></li>
             </ul>
         </div>
 

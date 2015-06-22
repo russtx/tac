@@ -1,0 +1,19 @@
+
+
+.site-content {
+    display: flex;
+    max-height: 100vh;
+}
+
+.content-area {
+    //flex: 2;
+}
+.site-content .widget-area {
+    //flex: 1;
+}
+.flex-container {
+    display: flex;
+}
+.flex1 {
+    flex: 1;
+}

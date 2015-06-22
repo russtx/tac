@@ -1,0 +1,4 @@
+[28-May-2015 20:24:21 UTC] PHP Warning:  mysql_get_server_info(): Access denied for user 'root'@'localhost' (using password: NO) in /home/totalaccessory/public_html/wp-content/themes/oneengine/plugins/admin-core/inc/tracking.php on line 333
+[28-May-2015 20:24:21 UTC] PHP Warning:  mysql_get_server_info(): A link to the server could not be established in /home/totalaccessory/public_html/wp-content/themes/oneengine/plugins/admin-core/inc/tracking.php on line 333
+[05-Jun-2015 04:59:31 UTC] PHP Warning:  mysql_get_server_info(): Access denied for user 'root'@'localhost' (using password: NO) in /home/totalaccessory/public_html/wp-content/themes/oneengine/plugins/admin-core/inc/tracking.php on line 333
+[05-Jun-2015 04:59:31 UTC] PHP Warning:  mysql_get_server_info(): A link to the server could not be established in /home/totalaccessory/public_html/wp-content/themes/oneengine/plugins/admin-core/inc/tracking.php on line 333
