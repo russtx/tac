@@ -261,185 +261,6 @@ th {
   padding: 0;
 }
 
-/*--------------------------New Stuff-----------------------------------------*/
-#page {
-  height: 100vh;
-}
-
-/*------------------------header----------------------------------------------*/
-#tacHeader {
-  clear: both;
-  width: 100%;
-  position: absolute;
-}
-
-#tacHeader img {
-  margin: 15em auto 0 auto;
-  width: 50%;
-  display: block;
-}
-
-.homepageInfo {
-  width: 100%;
-  position: absolute;
-  margin: 40em 0 0 0;
-}
-
-.homepageInfo ul {
-  list-style-type: none;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.homepageInfo ul li a {
-  text-decoration: none;
-  font-size: 2em;
-  font-weight: 900;
-  line-height: .1em;
-}
-
-.homepageInfo ul li a:hover {
-  opacity: .7;
-}
-
-.homepageInfo ul li {
-  width: 50%;
-  display: block;
-  margin: 0 auto;
-  padding: .41em 0;
-}
-
-.homepageInfo ul li a i {
-  padding: 0 15px 5px 0;
-}
-
-body.custom-background {
-  max-height: 100vh;
-}
-
-/*-------------------------------content area --------------------------------*/
-.content-area {
-  padding: 300px 50px;
-}
-
-.iconBox {
-  width: 100px;
-  height: 100px;
-}
-
-.slidingIcons {
-  width: 100%;
-  max-height: 200px;
-  position: relative;
-  top: 55em;
-  left: 10%;
-}
-
-.slidingIcons ul {
-  list-style-type: none;
-  margin: 0 auto;
-  width: 60%;
-}
-
-.slidingIcons ul li {
-  display: inline;
-}
-
-li.iconBox img {
-  max-width: 120px;
-  height: auto;
-  padding: 0;
-  margin: 0 30px;
-}
-
-/* entire container, keeps perspective */
-.flip-container {
-  perspective: 1000;
-}
-
-/* flip the pane when hovered */
-.flip-container:hover .flipper, .flip-container.hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.flip-container, .front, .back {
-  width: 320px;
-  height: 480px;
-}
-
-/* flip speed goes here */
-.flipper {
-  transition: 0.6s;
-  transform-style: preserve-3d;
-  position: relative;
-}
-
-/* hide back of pane during swap */
-.front, .back {
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-/* front pane, placed above back */
-.front {
-  z-index: 2;
-  /* for firefox 31 */
-  transform: rotateY(0deg);
-}
-
-/* back, initially hidden pane */
-.back {
-  transform: rotateY(180deg);
-}
-
-/*-------------------------Footer area ---------------------------------------*/
-#colophon {
-  position: absolute;
-  bottom: -50px;
-  width: 100%;
-  background-color: rgba(0, 0, 5, 0.5);
-  padding-top: 20px;
-}
-
-.socialIcons ul {
-  width: 100%;
-  clear: both;
-  margin: 10px auto;
-  text-align: center;
-}
-
-.socialIcons ul li {
-  display: inline;
-  padding: 10px 20px;
-  font-size: 2em;
-}
-
-.socialIcons ul li a:hover {
-  opacity: .7;
-}
-
-.site-info {
-  padding: 0 0 20px 40px;
-}
-
-#colophon > div.site-info > a:nth-child(3) {
-  float: right;
-  padding: 0 40px 20px 0;
-}
-
-/*-------------------------------------------test page -----------------------------------------------------------*/
-.testList ul {
-  display: inline;
-}
-
-.testList ul li {
-  display: inline;
-  float: left;
-  text-decoration: none;
-}
-
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -1029,3 +850,429 @@ object {
 }
 
 /*-----------------------------------------------------------*/
+/*--------------------------New Stuff-----------------------------------------*/
+#page {
+  height: 100vh;
+}
+
+/*------------------------header----------------------------------------------*/
+#tacHeader {
+  clear: both;
+  width: 50%;
+  position: absolute;
+  margin: 0 0 0 20%;
+}
+
+#tacHeader img {
+  margin: 15em auto 0 auto;
+  width: 100%;
+  display: block;
+}
+
+.homepageInfo {
+  width: 100%;
+  position: absolute;
+  margin: 40em 0 0 0;
+}
+
+.homepageInfo ul {
+  list-style-type: none;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.homepageInfo ul li a {
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 900;
+  line-height: .1em;
+}
+
+.homepageInfo ul li a:hover {
+  opacity: .7;
+}
+
+.homepageInfo ul li {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+  padding: .41em 0;
+}
+
+.homepageInfo ul li a i {
+  padding: 0 15px 5px 0;
+}
+
+body.custom-background {
+  max-height: 100vh;
+}
+
+/*-------------------------------content area --------------------------------*/
+.content-area {
+  padding: 300px 50px;
+}
+
+.iconBox {
+  width: 100px;
+  height: 100px;
+}
+
+.slidingIcons {
+  width: 100%;
+  max-height: 200px;
+  position: relative;
+  top: 55em;
+  left: 10%;
+}
+
+.slidingIcons ul {
+  list-style-type: none;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.slidingIcons ul li {
+  display: inline;
+}
+
+li.iconBox img {
+  max-width: 120px;
+  height: auto;
+  padding: 0;
+  margin: 0 30px;
+}
+
+#main > div > ul > li.iconBox.icon1.flex1 > a > button {
+  background-color: rgba(255, 243, 0, 0.8);
+}
+
+#main > div > ul > li.iconBox.icon2.flex1 > a > button {
+  background-color: rgba(254, 0, 0, 0.8);
+}
+
+#main > div > ul > li.iconBox.icon3.flex1 > a > button {
+  background-color: rgba(0, 0, 254, 0.8);
+}
+
+#main > div > ul > li.iconBox.icon4.flex1 > a > button {
+  background-color: rgba(127, 127, 127, 0.8);
+}
+
+#main > div > ul > li.iconBox.icon5.flex1 > a > button {
+  background-color: rgba(255, 127, 0, 0.8);
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+  perspective: 1000;
+}
+
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
+}
+
+/*-------------------------Footer area ---------------------------------------*/
+#colophon {
+  position: fixed;
+  bottom: -50px;
+  width: 100%;
+  background-color: rgba(0, 0, 5, 0.5);
+  padding-top: 20px;
+}
+
+.socialIcons ul {
+  width: 100%;
+  clear: both;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.socialIcons ul li {
+  display: inline;
+  padding: 10px 20px;
+  font-size: 2em;
+}
+
+.socialIcons ul li a:hover {
+  opacity: .7;
+}
+
+.site-info {
+  padding: 0 0 20px 40px;
+}
+
+#colophon > div.site-info > a:nth-child(3) {
+  float: right;
+  padding: 0 40px 20px 0;
+}
+
+/*-------------------------------------------test page -----------------------------------------------------------*/
+.testList ul {
+  display: inline;
+}
+
+.testList ul li {
+  display: inline;
+  float: left;
+  text-decoration: none;
+}
+
+/*------------------------ Media Queries ----------------------*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #tacHeader {
+    top: -38%;
+  }
+
+  body.custom-background {
+    background-position: 25% 25% !important;
+  }
+
+  .homepageInfo {
+    margin: 2em 0 0 3em;
+  }
+
+  .homepageInfo ul {
+    width: 100%;
+  }
+
+  .homepageInfo ul li {
+    width: 100%;
+  }
+
+  .homepageInfo ul li a {
+    font-size: .7em;
+    font-weight: 900;
+    line-height: .1em;
+  }
+
+  .homeButton h4 {
+    margin: 0;
+    color: #000;
+  }
+
+  #colophon {
+    padding-top: 0;
+  }
+
+  #colophon a {
+    font-size: .8em;
+  }
+
+  .slidingIcons {
+    top: -6em;
+    width: 100%;
+    left: 0;
+  }
+
+  .slidingIcons ul {
+    width: 100%;
+    padding: 0;
+  }
+
+  .socialIcons ul {
+    padding: 0;
+  }
+
+  .socialIcons ul li {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  .homeButton {
+    width: 100%;
+  }
+}
+/* --------------------------------------------------------------------------*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  #tacHeader {
+    top: -30%;
+  }
+}
+/*---------------------------------------------------------------------------*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body.custom-background {
+    background-position: 25% 25% !important;
+  }
+
+  #tacHeader {
+    top: -20%;
+  }
+
+  .homepageInfo {
+    margin: 12em 0 0 0;
+  }
+
+  .homepageInfo ul li a {
+    font-size: 1.5em;
+  }
+
+  .slidingIcons {
+    top: 10em;
+  }
+
+  .slidingIcons ul {
+    width: 100%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+/*----------------------------------------------------------------------------*/
+@media (min-width: 1025px) {
+  body.custom-background {
+    background-position: 25% 25% !important;
+  }
+
+  #tacHeader {
+    top: -18%;
+  }
+
+  .homepageInfo {
+    margin: 13em 0 0 0;
+  }
+
+  .homepageInfo ul {
+    width: 100%;
+  }
+
+  .homepageInfo ul li a {
+    font-size: 1.5em;
+  }
+
+  .slidingIcons {
+    top: 5em;
+    left: 18%;
+  }
+
+  .slidingIcons ul {
+    width: 100%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+/*---------------------------------------------------------------------------*/
+@media (min-width: 1250px) {
+  #tacHeader {
+    top: -10%;
+  }
+
+  .homepageInfo {
+    margin: 18em 0 0 0;
+  }
+
+  .slidingIcons {
+    top: 15em;
+    left: 25%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+/*---------------------------------------------------------------------------*/
+@media (min-width: 1400px) {
+  .slidingIcons {
+    left: 35%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+/*---------------------------------------------------------------------------*/
+@media (min-width: 1550px) {
+  .homepageInfo {
+    margin: 24em 0 0 0;
+  }
+
+  .slidingIcons {
+    top: 20em;
+    left: 45%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+/*---------------------------------------------------------------------------*/
+@media (min-width: 1750px) {
+  .homepageInfo {
+    margin: 24em 0 0 0;
+  }
+
+  .slidingIcons {
+    left: 55%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+/*---------------------------------------------------------------------------*/
+@media (min-width: 1950px) {
+  .homepageInfo {
+    margin: 24em 0 0 0;
+  }
+
+  .slidingIcons {
+    left: 70%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+/*---------------------------------------------------------------------------*/
+@media (min-width: 2150px) {
+  #tacHeader {
+    width: 90%;
+  }
+
+  .homepageInfo {
+    margin: 24em 0 0 0;
+  }
+
+  .slidingIcons {
+    left: 70%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
