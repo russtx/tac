@@ -18,6 +18,29 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+     _____                    _____                _____          
+     /\    \                  /\    \              /\    \         
+    /::\    \                /::\____\            /::\    \        
+    \:::\    \              /::::|   |            \:::\    \       
+     \:::\    \            /:::::|   |             \:::\    \      
+      \:::\    \          /::::::|   |              \:::\    \     
+       \:::\    \        /:::/|::|   |               \:::\    \    
+       /::::\    \      /:::/ |::|   |               /::::\    \   
+      /::::::\    \    /:::/  |::|___|______        /::::::\    \  
+     /:::/\:::\    \  /:::/   |::::::::\    \      /:::/\:::\    \ 
+    /:::/  \:::\____\/:::/    |:::::::::\____\    /:::/  \:::\____\
+   /:::/    \::/    /\::/    / ~~~~~/:::/    /   /:::/    \::/    /
+  /:::/    / \/____/  \/____/      /:::/    /   /:::/    / \/____/ 
+ /:::/    /                       /:::/    /   /:::/    /          
+/:::/    /                       /:::/    /   /:::/    /           
+\::/    /                       /:::/    /    \::/    /            
+ \/____/                       /:::/    /      \/____/             
+                              /:::/    /                           
+                             /:::/    /                            
+                             \::/    /                             
+                              \/____/                              
+                                                                   
+
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -1004,6 +1027,10 @@ li.iconBox img {
   transform: rotateY(180deg);
 }
 
+.page-content, .entry-content, .entry-summary {
+  margin: 1.5em 0 10em 0;
+}
+
 /*-------------------------Footer area ---------------------------------------*/
 #colophon {
   position: fixed;
@@ -1048,6 +1075,59 @@ li.iconBox img {
   display: inline;
   float: left;
   text-decoration: none;
+}
+
+/*-------------------------------------------- test page 3 -----------------------------------------------------------*/
+#mainTest {
+  width: 100%;
+}
+
+#mylogo {
+  border: 1px solid red;
+  width: 200px;
+  height: 100px;
+  display: block;
+  position: relative;
+}
+
+/*--------------------------------------------------------light box ----------------------------------------------------*/
+#lightbox {
+  background-color: #eee;
+  padding: 10px;
+  border-bottom: 2px solid #666;
+  border-right: 2px solid #666;
+}
+
+#lightboxDetails {
+  font-size: 0.8em;
+  padding-top: 0.4em;
+}
+
+#lightboxCaption {
+  float: left;
+}
+
+#keyboardMsg {
+  float: right;
+}
+
+#lightbox img {
+  border: none;
+}
+
+#overlay img {
+  border: none;
+}
+
+#overlay {
+  background-image: url(overlay.png);
+}
+
+* html #overlay {
+  background-color: #000;
+  back\ground-color: transparent;
+  background-image: url(blank.gif);
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="overlay.png", sizingMethod="scale");
 }
 
 /*------------------------ Media Queries ----------------------*/
@@ -1114,11 +1194,19 @@ li.iconBox img {
   .homeButton {
     width: 100%;
   }
+
+  #main > div > ul > li.iconBox.icon5.flex1 > a > button {
+    margin-bottom: 30px;
+  }
 }
 /* --------------------------------------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
   #tacHeader {
     top: -30%;
+  }
+
+  #tacHeader img {
+    margin: 16em auto 0 auto;
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -1262,6 +1350,11 @@ li.iconBox img {
 @media (min-width: 2150px) {
   #tacHeader {
     width: 90%;
+    margin: 0;
+  }
+
+  #tacHeader img {
+    width: 50%;
   }
 
   .homepageInfo {

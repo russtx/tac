@@ -1016,6 +1016,10 @@ li.iconBox img {
           transform: rotateY(180deg);
 }
 
+.page-content, .entry-content, .entry-summary {
+  margin: 1.5em 0 10em 0;
+}
+
 /*-------------------------Footer area ---------------------------------------*/
 #colophon {
   position: fixed;
@@ -1060,6 +1064,19 @@ li.iconBox img {
   display: inline;
   float: left;
   text-decoration: none;
+}
+
+/*-------------------------------------------- test page 3 -----------------------------------------------------------*/
+#mainTest {
+  width: 100%;
+}
+
+#mylogo {
+  border: 1px solid red;
+  width: 200px;
+  height: 100px;
+  display: block;
+  position: relative;
 }
 
 /*------------------------ Media Queries ----------------------*/
@@ -1126,11 +1143,19 @@ li.iconBox img {
   .homeButton {
     width: 100%;
   }
+
+  #main > div > ul > li.iconBox.icon5.flex1 > a > button {
+    margin-bottom: 30px;
+  }
 }
 /* --------------------------------------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
   #tacHeader {
     top: -30%;
+  }
+
+  #tacHeader img {
+    margin: 16em auto 0 auto;
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -1274,6 +1299,11 @@ li.iconBox img {
 @media (min-width: 2150px) {
   #tacHeader {
     width: 90%;
+    margin: 0;
+  }
+
+  #tacHeader img {
+    width: 50%;
   }
 
   .homepageInfo {

@@ -1,0 +1,14 @@
+/*
+Theme Name: Tampa
+Theme URI: https://placester.com/themes/tampa
+Description: Alas, not all of us can sell real estate in a place with nonstop sun, palm trees, and breathtaking vistas. No, some of us are forced to endure the cold, rain, snow, and general ickiness of the northern climes. But if you can’t head south, why not let south come to you? With its warm red, orange, and yellow hues, Tampa will have you and your site visitors wearing your Bermuda shorts, no matter what ungodly weather you’re having. Perfect for both individual agents and single-office agencies, Tampa is ideal for displaying and surfing multiple property listings, with clean lines, a two-column layout, and top-level page navigation. It’s also fully customizable, so you can make it your own, and SEO optimized, which means more sun on more happy faces. Use with <a href="http://placester.com/">Placester</a>'s <a href="wordpress.org/extend/plugins/placester/">Real Estate Pro plugin</a>.
+Version: 2.2
+Author: The Placester Team
+Author URI: https://placester.com/
+Tags: tan, red, orange, right-sidebar, fixed-width, custom-menu, theme-options
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* Get base CSS */
+@import url('css/style.css');

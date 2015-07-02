@@ -3,6 +3,11 @@
  *
  * Contains handlers to make Theme Customizer preview reload changes asynchronously.
  */
+$(document).ready(function() {
+    $('#mylogo').animate({
+        left: '+=100%'
+    });
+});
 
 ( function( $ ) {
 	// Site title and description.
