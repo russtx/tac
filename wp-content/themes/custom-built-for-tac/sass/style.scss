@@ -18,29 +18,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-     _____                    _____                _____          
-     /\    \                  /\    \              /\    \         
-    /::\    \                /::\____\            /::\    \        
-    \:::\    \              /::::|   |            \:::\    \       
-     \:::\    \            /:::::|   |             \:::\    \      
-      \:::\    \          /::::::|   |              \:::\    \     
-       \:::\    \        /:::/|::|   |               \:::\    \    
-       /::::\    \      /:::/ |::|   |               /::::\    \   
-      /::::::\    \    /:::/  |::|___|______        /::::::\    \  
-     /:::/\:::\    \  /:::/   |::::::::\    \      /:::/\:::\    \ 
-    /:::/  \:::\____\/:::/    |:::::::::\____\    /:::/  \:::\____\
-   /:::/    \::/    /\::/    / ~~~~~/:::/    /   /:::/    \::/    /
-  /:::/    / \/____/  \/____/      /:::/    /   /:::/    / \/____/ 
- /:::/    /                       /:::/    /   /:::/    /          
-/:::/    /                       /:::/    /   /:::/    /           
-\::/    /                       /:::/    /    \::/    /            
- \/____/                       /:::/    /      \/____/             
-                              /:::/    /                           
-                             /:::/    /                            
-                             \::/    /                             
-                              \/____/                              
-                                                                   
-
 */
 
 
@@ -145,11 +122,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 
 /*------------------------header----------------------------------------------*/
+.main-navigation a {
+    color: #00007e;
+    font-weight: 900;
+}
 #tacHeader {
         clear: both;
         width: 50%;
         position: absolute;
-        margin: 0 0 0 20%;
+        margin: -10% 0 0 0;
 }
 #tacHeader img{
         //clear: both;
@@ -173,15 +154,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 }
 .homepageInfo ul li a {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 900;
-    line-height: .1em;
+    line-height: .5em;
 }
 .homepageInfo ul li a:hover {
     opacity: .7;
 }
 .homepageInfo ul li {
-    width: 50%;
+    width: 80%;
     display: block;
     margin: 0 auto;
     padding: .41em 0;
@@ -193,22 +174,24 @@ body.custom-background {
     max-height: 100vh;
 }
 /*-------------------------------content area --------------------------------*/
+
+.page-id-46 #primary {
+    width: 100%
+}
 .content-area {
         padding: 300px 50px;
 }
 .iconBox {
-    width: 100px;
-    height: 100px;
-    //border-radius: 5px;
-   // border: solid 2px #fff;
-    //background-color: rgba(0,0,5,0.5);
+    width: 220px;
+    height: 220px;
+    
 }
 .slidingIcons {
     width: 100%;
     max-height:200px;
     position: relative;
-    top: 55em;
-    left:10%;
+    top: 20em;
+    left: 6%;
 }
 .slidingIcons ul {
     list-style-type: none;
@@ -216,13 +199,28 @@ body.custom-background {
     width: 60%;
 }
 .slidingIcons ul li {
-   display: inline;
+  // margin: 0 40px;
+}
+.slidingIcons li {
+    display: inline;
+    float: left;
+    margin: 20px;
+}
+.slidingIcons ul li a {
+    margin: 0;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-weight: 900;
 }
 li.iconBox img {
-    max-width: 120px;
+    max-width: 100%;
     height: auto;
     padding: 0;
-    margin: 0 30px;
+    margin: 0;
+}
+.homeButton{
+    width: 200px;
+    height: 200px;
 }
 #main > div > ul > li.iconBox.icon1.flex1 > a > button {
     background-color: rgba(255, 243, 0, .8); 
@@ -357,7 +355,7 @@ li.iconBox img {
 
 * html #overlay{
 	background-color: #000;
-	back\ground-color: transparent;
+	background-color: transparent;
 	background-image: url(blank.gif);
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="overlay.png", sizingMethod="scale");
 	}
@@ -375,7 +373,7 @@ and (max-device-width : 480px)
         background-position:25% 25% !important;
     }
     .homepageInfo {
-        margin: 2em 0 0 3em;
+        margin: 4em 0 0 0em;
     }
     .homepageInfo ul {
         width: 100%;
@@ -384,7 +382,7 @@ and (max-device-width : 480px)
         width: 100%
     }
     .homepageInfo ul li a {
-        font-size: .7em;
+        font-size: 1em;
         font-weight: 900;
         line-height: .1em;
     }
@@ -420,6 +418,12 @@ and (max-device-width : 480px)
     #main > div > ul > li.iconBox.icon5.flex1 > a > button {
         margin-bottom: 30px;
     }
+    #main > div > ul > li.iconBox.icon5.flex1 > a {
+        padding-bottom: 100px;
+    }
+    .site-info {
+        padding: 0 0 30px 40px;
+    }
 }
 /* --------------------------------------------------------------------------*/
 @media only screen 
@@ -438,10 +442,11 @@ and (orientation : portrait) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
     body.custom-background{
-        background-position: 25% 25% !important;
+        background-position: 50% 25% !important;
     }
     #tacHeader {
-        top: -20%;
+        top: 0;
+        margin: -15% 0 0 20%;
     }
     .homepageInfo {
         margin: 12em 0 0 0;
@@ -450,13 +455,31 @@ and (max-device-width : 1024px) {
         font-size: 1.5em;
     }
     .slidingIcons {
-        top: 10em;
+        top: 6em;
+        left: 0;
     }
     .slidingIcons ul {
         width: 100%;
     }
+    .slidingIcons li {
+        margin: 10px;
+    }
     button {
         border-radius: 15px;
+    }
+    li.iconBox img {
+        max-width: 100%;
+    }
+    .homeButton {
+        width: 150px;
+        height: 150px;
+    }
+    .iconBox {
+        width: 150px;
+        height: 150px;
+    }
+    .slidingIcons ul li a {
+        font-size: 1em;
     }
 }
 
@@ -466,98 +489,188 @@ and (max-device-width : 1024px) {
 
 /*----------------------------------------------------------------------------*/
 @media  
- (min-width : 1025px) {
-    body.custom-background{
-        background-position: 25% 25%!important;
-    }
-    #tacHeader {
-        top: -18%
+ (min-width : 1025px) and (max-width : 1249px) {
+     #tacHeader {
+        margin: -23% 0 0 18%;
     }
     .homepageInfo {
-        margin: 13em 0 0 0;
-    }
-    .homepageInfo ul {
-        width: 100%;
+         margin: 12em 0 0 -4%;
     }
     .homepageInfo ul li a {
         font-size: 1.5em;
     }
     .slidingIcons {
-        top: 5em;
-        left: 18%;
+        top: 7em;
+        left: 0;
     }
     .slidingIcons ul {
-        width: 100%;
+        width: 80%;
+    }
+    .slidingIcons li {
+        margin: 10px;
     }
      button {
         border-radius: 15px;
     }
+    .iconBox {
+        width: 100px;
+        height: 100px;
+    }
+    .homeButton {
+        width: 100px;
+        height: 100px;
+    }
+    li .iconBox img {
+        max-width: 80%;
+    }
 }
 /*---------------------------------------------------------------------------*/
 @media  
-(min-width : 1250px) {
+(min-width : 1250px) and (max-width : 1399px) {
     #tacHeader {
-        top: -10%;
+        margin: -18% 0 0 18%;
     }
     .homepageInfo {
-        margin: 18em 0 0 0;
+         margin: 15em 0 0 -4%;
     }
     .slidingIcons {
         top: 15em;
-        left: 25%;
+        left: 0;
+    }
+    .slidingIcons ul {
+        width: 80%;
     }
      button {
         border-radius: 15px;
     }
+    .iconBox {
+        width: 120px;
+        height: 120px;
+    }
+    .homeButton {
+        width: 120px;
+        height: 120px;
+    }
+    li .iconBox img {
+        max-width: 80%;
+    }
 }
 /*---------------------------------------------------------------------------*/
 @media  
-(min-width : 1400px) {
+(min-width : 1400px) and (max-width : 1549px) {
+    #tacHeader {
+        margin: -14% 0 0 18%;
+    }
+    .homepageInfo {
+         margin: 18em 0 0 -4%;
+    }
     .slidingIcons {
-        left: 35%;
+        top: 15em;
+        left: 0;
+    }
+    .slidingIcons ul {
+        width: 80%;
     }
      button {
         border-radius: 15px;
     }
+    .iconBox {
+        width: 150px;
+        height: 150px;
+    }
+    .homeButton {
+        width: 150px;
+        height: 150px;
+    }
+    li .iconBox img {
+        max-width: 80px;
+    }
 }
 /*---------------------------------------------------------------------------*/
 @media  
-(min-width : 1550px) {
+(min-width : 1550px) and (max-width : 1749px) {
+    #tacHeader {
+        margin: -10% 0 0 18%;
+    }
     .homepageInfo {
          margin: 24em 0 0 0;
     }
     .slidingIcons {
-        top: 20em;
-        left: 45%;
+        left: 6%;
+    }
+    .slidingIcons ul {
+        width: 80%;
     }
      button {
         border-radius: 15px;
+    }
+    .iconBox {
+        width: 150px;
+        height: 150px;
+    }
+    .homeButton {
+        width: 150px;
+        height: 150px;
+    }
+    li .iconBox img {
+        max-width: 80px;
     }
 }
 /*---------------------------------------------------------------------------*/
 @media  
-(min-width : 1750px) {
+(min-width : 1750px) and (max-width : 1949px) {
+    #tacHeader {
+        margin: -10% 0 0 18%;
+    }
     .homepageInfo {
          margin: 24em 0 0 0;
     }
     .slidingIcons {
-        left: 55%;
+        left: 6%;
+    }
+    .slidingIcons ul {
+        width: 80%;
     }
      button {
         border-radius: 15px;
+    }
+    .iconBox {
+        width: 150px;
+        height: 150px;
+    }
+    .homeButton {
+        width: 150px;
+        height: 150px;
+    }
+    li .iconBox img {
+        max-width: 80px;
     }
 }
 /*---------------------------------------------------------------------------*/
 @media  
-(min-width : 1950px) {
+(min-width : 1950px) and (max-width : 2149px) {
+    #tacHeader {
+        margin: -10% 0 0 18%;
+    }
     .homepageInfo {
          margin: 24em 0 0 0;
     }
     .slidingIcons {
-        left: 70%;
+        left: -5%;
     }
      button {
         border-radius: 15px;
+    }
+    .iconBox {
+        width: 150px;
+        height: 150px;
+    }
+    .homeButton {
+        width: 150px;
+        height: 150px;
+    }
+    li .iconBox img {
+        max-width: 80px;
     }
 }
 /*---------------------------------------------------------------------------*/
@@ -565,7 +678,7 @@ and (max-device-width : 1024px) {
 (min-width : 2150px) {
     #tacHeader{
         width: 90%;
-        margin: 0;
+        //margin: 0;
     }
     #tacHeader img {
         width: 50%;
@@ -574,9 +687,18 @@ and (max-device-width : 1024px) {
          margin: 24em 0 0 0;
     }
     .slidingIcons {
-        left: 70%;
+        //left: 70%;
     }
     button {
         border-radius: 15px;
+    }
+    .slidingIcons ul {
+        width: 80%;
+    }
+    .slidingIcons li{
+        //float: none;
+    }
+    #main > div > ul > li.iconBox.icon1.flex1 > a > span {
+        margin: 0;
     }
 }
