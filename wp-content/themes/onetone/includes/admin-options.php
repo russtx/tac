@@ -227,8 +227,8 @@ p" title="Bootstrap"></a></div>
 		
 	$options[] = array(
 		'name' => __('Favicon', 'onetone'),
-		'desc' => __('An icon associated with a URL that is variously displayed, as in a browser\'s address bar or next to the site name in a bookmark list. Learn more about 
-					 <a href="'.esc_url("http://en.wikipedia.org/wiki/Favicon").'" target="_blank">Favicon</a>', 'onetone'),
+		'desc' => sprintf(__('An icon associated with a URL that is variously displayed, as in a browser\'s address bar or next to the site name in a bookmark list. Learn more about 
+					 <a href="%s" target="_blank">Favicon</a>', 'onetone'),esc_url("http://en.wikipedia.org/wiki/Favicon")),
 		'id' => 'favicon',
 		'type' => 'upload');
 		
@@ -306,11 +306,7 @@ p" title="Bootstrap"></a></div>
 		
 		$options[] = array('name' => __('Section 1 Content', 'onetone'),'std' => 'content','id' => 'section_1_content',
 		'type' => 'select','options'=>array("content"=>"Content","slider"=>"Slider"));
-		
-	  
-		
-		
-		
+
 		if(isset($section_num) && is_numeric($section_num) && $section_num>0){
 		$section_num = $section_num;
 		}
@@ -330,27 +326,31 @@ p" title="Bootstrap"></a></div>
 		if(!isset($section_css_class[$i])){$section_css_class[$i] = "";}
 		if(!isset($section_content[$i])){$section_content[$i] = "";}
 		
-		$options[] = array('name' => sprintf(__('Section %s', 'onetone'),($i+1)),'id' => 'slide_group_start_'.$i.'','type' => 'start_group','class'=>'group_close');
-		$options[] = array('name' => __('Section Title', 'onetone'),'id' => 'section_title_'.$i.'','type' => 'text','std'=>$section_title[$i]);
-		$options[] = array('name' => __('Menu Title', 'onetone'),'id' => 'menu_title_'.$i.'','type' => 'text','std'=>$section_menu[$i],'desc'=>'This title will display in the header menu. It is required');
-		$options[] = array('name' => __('Menu Slug', 'onetone'),'id' => 'menu_slug_'.$i.'','type' => 'text','std'=>$section_slug[$i],'desc'=>'The  "slug" is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.');
+		$options[] = array('name' => sprintf(__('Section %s', 'onetone'),($i+1)),'id' => 'slide_group_start_'.$i.'','type' => 'start_group','class'=>'home-section group_close');
+		$options[] = array('name' => __('Section Title', 'onetone'),'id' => 'section_title_'.$i.'','type' => 'text','std'=>$section_title[$i],'class'=>'section-item');
+		$options[] = array('name' => __('Menu Title', 'onetone'),'id' => 'menu_title_'.$i.'','type' => 'text','std'=>$section_menu[$i],'desc'=>'This title will display in the header menu. It is required','class'=>'section-item');
+		$options[] = array('name' => __('Menu Slug', 'onetone'),'id' => 'menu_slug_'.$i.'','type' => 'text','std'=>$section_slug[$i],'desc'=>'The  "slug" is the URL-friendly version of the name. It is usually all lowercase and contains only letters, numbers, and hyphens.','class'=>'section-item');
 		
 		
 		
-		$options[] = array('name' =>  __('Section Background', 'onetone'),'id' => 'section_background_'.$i.'','std' => $section_background[$i],'type' => 'background' );
+		$options[] = array('name' =>  __('Section Background', 'onetone'),'id' => 'section_background_'.$i.'','std' => $section_background[$i],'type' => 'background' ,'class'=>'section-item');
 		
 		$options[] = array('name' => __('Parallax Scrolling Background Image', 'onetone'),'std' => 'no','id' => 'parallax_scrolling_'.$i.'',
-		'type' => 'select','class'=>'mini','options'=>array("no"=>"no","yes"=>"yes"));
+		'type' => 'select','class'=>'mini section-item','options'=>array("no"=>"no","yes"=>"yes"));
 		
 	    if($i == 0){
 		
 		}
 		
-		$options[] = array('name' => __('Section Css Class', 'onetone'),'id' => 'section_css_class_'.$i.'','type' => 'text','std'=>$section_css_class[$i]);
-	   
-	  
-	   
-	   $options[] = array('name' => __('Section Content', 'onetone'),'id' => 'section_content_'.$i,'std' => $section_content[$i],'type' => 'editor');
+		$options[] = array('name' => __('Section Css Class', 'onetone'),'id' => 'section_css_class_'.$i.'','type' => 'text','std'=>$section_css_class[$i],'class'=>'section-item');
+	    $options[] = array('name' => __('Section Content', 'onetone'),'id' => 'section_content_'.$i,'std' => $section_content[$i],'type' => 'editor');
+		 $options[] = array(
+		'name' => '',
+		'desc' => '<div style="overflow:hidden; background-color:#eee; padding:20px;"><a data-section="'.$i.'" class="delete-section button-primary" style="float:right;" title="Delete">Delete this section</a></div>',
+		'id' => 'delete_section_'.$i,
+		'std' => '',
+		'type' => 'info',
+		'class'=>'section-item');
 	
 		$options[] = array('name' => '','id' => 'slide_group_end_'.$i.'','type' => 'end_group');
 		

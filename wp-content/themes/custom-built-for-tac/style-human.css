@@ -862,11 +862,16 @@ object {
 }
 
 /*------------------------header----------------------------------------------*/
+.main-navigation a {
+  color: #00007e;
+  font-weight: 900;
+}
+
 #tacHeader {
   clear: both;
   width: 50%;
   position: absolute;
-  margin: 0 0 0 20%;
+  margin: -10% 0 0 0;
 }
 
 #tacHeader img {
@@ -889,9 +894,9 @@ object {
 
 .homepageInfo ul li a {
   text-decoration: none;
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 900;
-  line-height: .1em;
+  line-height: .5em;
 }
 
 .homepageInfo ul li a:hover {
@@ -899,7 +904,7 @@ object {
 }
 
 .homepageInfo ul li {
-  width: 50%;
+  width: 80%;
   display: block;
   margin: 0 auto;
   padding: .41em 0;
@@ -914,21 +919,25 @@ body.custom-background {
 }
 
 /*-------------------------------content area --------------------------------*/
+.page-id-46 #primary {
+  width: 100%;
+}
+
 .content-area {
   padding: 300px 50px;
 }
 
 .iconBox {
-  width: 100px;
-  height: 100px;
+  width: 220px;
+  height: 220px;
 }
 
 .slidingIcons {
   width: 100%;
   max-height: 200px;
   position: relative;
-  top: 55em;
-  left: 10%;
+  top: 20em;
+  left: 6%;
 }
 
 .slidingIcons ul {
@@ -937,15 +946,29 @@ body.custom-background {
   width: 60%;
 }
 
-.slidingIcons ul li {
+.slidingIcons li {
   display: inline;
+  float: left;
+  margin: 20px;
+}
+
+.slidingIcons ul li a {
+  margin: 0;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: 900;
 }
 
 li.iconBox img {
-  max-width: 120px;
+  max-width: 100%;
   height: auto;
   padding: 0;
-  margin: 0 30px;
+  margin: 0;
+}
+
+.homeButton {
+  width: 200px;
+  height: 200px;
 }
 
 #main > div > ul > li.iconBox.icon1.flex1 > a > button {
@@ -1067,16 +1090,59 @@ li.iconBox img {
 }
 
 /*-------------------------------------------- test page 3 -----------------------------------------------------------*/
-#mainTest {
-  width: 100%;
+.box {
+  width: 100px;
+  height: 100px;
+  background: #FFF;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  will-change: transform;
 }
 
-#mylogo {
-  border: 1px solid red;
-  width: 200px;
-  height: 100px;
-  display: block;
-  position: relative;
+.hidden {
+  display: none;
+  width: 500px;
+  height: 500px;
+  background: blue;
+}
+
+/*--------------------------------------------------------light box ----------------------------------------------------*/
+#lightbox {
+  background-color: #eee;
+  padding: 10px;
+  border-bottom: 2px solid #666;
+  border-right: 2px solid #666;
+}
+
+#lightboxDetails {
+  font-size: 0.8em;
+  padding-top: 0.4em;
+}
+
+#lightboxCaption {
+  float: left;
+}
+
+#keyboardMsg {
+  float: right;
+}
+
+#lightbox img {
+  border: none;
+}
+
+#overlay img {
+  border: none;
+}
+
+#overlay {
+  background-image: url(overlay.png);
+}
+
+* html #overlay {
+  background-color: #000;
+  background-color: transparent;
+  background-image: url(blank.gif);
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="overlay.png", sizingMethod="scale");
 }
 
 /*------------------------ Media Queries ----------------------*/
@@ -1090,7 +1156,7 @@ li.iconBox img {
   }
 
   .homepageInfo {
-    margin: 2em 0 0 3em;
+    margin: 4em 0 0 0em;
   }
 
   .homepageInfo ul {
@@ -1102,7 +1168,7 @@ li.iconBox img {
   }
 
   .homepageInfo ul li a {
-    font-size: .7em;
+    font-size: 1em;
     font-weight: 900;
     line-height: .1em;
   }
@@ -1147,6 +1213,14 @@ li.iconBox img {
   #main > div > ul > li.iconBox.icon5.flex1 > a > button {
     margin-bottom: 30px;
   }
+
+  #main > div > ul > li.iconBox.icon5.flex1 > a {
+    padding-bottom: 100px;
+  }
+
+  .site-info {
+    padding: 0 0 30px 40px;
+  }
 }
 /* --------------------------------------------------------------------------*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
@@ -1161,11 +1235,12 @@ li.iconBox img {
 /*---------------------------------------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   body.custom-background {
-    background-position: 25% 25% !important;
+    background-position: 50% 25% !important;
   }
 
   #tacHeader {
-    top: -20%;
+    top: 0;
+    margin: -15% 0 0 20%;
   }
 
   .homepageInfo {
@@ -1177,33 +1252,48 @@ li.iconBox img {
   }
 
   .slidingIcons {
-    top: 10em;
+    top: 6em;
+    left: 0;
   }
 
   .slidingIcons ul {
     width: 100%;
   }
 
+  .slidingIcons li {
+    margin: 10px;
+  }
+
   button {
     border-radius: 15px;
   }
-}
-/*----------------------------------------------------------------------------*/
-@media (min-width: 1025px) {
-  body.custom-background {
-    background-position: 25% 25% !important;
+
+  li.iconBox img {
+    max-width: 100%;
   }
 
+  .homeButton {
+    width: 150px;
+    height: 150px;
+  }
+
+  .iconBox {
+    width: 150px;
+    height: 150px;
+  }
+
+  .slidingIcons ul li a {
+    font-size: 1em;
+  }
+}
+/*----------------------------------------------------------------------------*/
+@media (min-width: 1025px) and (max-width: 1249px) {
   #tacHeader {
-    top: -18%;
+    margin: -23% 0 0 18%;
   }
 
   .homepageInfo {
-    margin: 13em 0 0 0;
-  }
-
-  .homepageInfo ul {
-    width: 100%;
+    margin: 12em 0 0 -4%;
   }
 
   .homepageInfo ul li a {
@@ -1211,95 +1301,218 @@ li.iconBox img {
   }
 
   .slidingIcons {
-    top: 5em;
-    left: 18%;
+    top: 7em;
+    left: 0;
   }
 
   .slidingIcons ul {
-    width: 100%;
+    width: 80%;
+  }
+
+  .slidingIcons li {
+    margin: 10px;
   }
 
   button {
     border-radius: 15px;
   }
+
+  .iconBox {
+    width: 100px;
+    height: 100px;
+  }
+
+  .homeButton {
+    width: 100px;
+    height: 100px;
+  }
+
+  li .iconBox img {
+    max-width: 80%;
+  }
 }
 /*---------------------------------------------------------------------------*/
-@media (min-width: 1250px) {
+@media (min-width: 1250px) and (max-width: 1399px) {
   #tacHeader {
-    top: -10%;
+    margin: -18% 0 0 18%;
   }
 
   .homepageInfo {
-    margin: 18em 0 0 0;
+    margin: 15em 0 0 -4%;
   }
 
   .slidingIcons {
     top: 15em;
-    left: 25%;
+    left: 0;
+  }
+
+  .slidingIcons ul {
+    width: 80%;
   }
 
   button {
     border-radius: 15px;
   }
+
+  .iconBox {
+    width: 120px;
+    height: 120px;
+  }
+
+  .homeButton {
+    width: 120px;
+    height: 120px;
+  }
+
+  li .iconBox img {
+    max-width: 80%;
+  }
 }
 /*---------------------------------------------------------------------------*/
-@media (min-width: 1400px) {
+@media (min-width: 1400px) and (max-width: 1549px) {
+  #tacHeader {
+    margin: -14% 0 0 18%;
+  }
+
+  .homepageInfo {
+    margin: 18em 0 0 -4%;
+  }
+
   .slidingIcons {
-    left: 35%;
+    top: 15em;
+    left: 0;
+  }
+
+  .slidingIcons ul {
+    width: 80%;
   }
 
   button {
     border-radius: 15px;
   }
+
+  .iconBox {
+    width: 150px;
+    height: 150px;
+  }
+
+  .homeButton {
+    width: 150px;
+    height: 150px;
+  }
+
+  li .iconBox img {
+    max-width: 80px;
+  }
 }
 /*---------------------------------------------------------------------------*/
-@media (min-width: 1550px) {
+@media (min-width: 1550px) and (max-width: 1749px) {
+  #tacHeader {
+    margin: -10% 0 0 18%;
+  }
+
   .homepageInfo {
     margin: 24em 0 0 0;
   }
 
   .slidingIcons {
-    top: 20em;
-    left: 45%;
+    left: 6%;
+  }
+
+  .slidingIcons ul {
+    width: 80%;
   }
 
   button {
     border-radius: 15px;
   }
+
+  .iconBox {
+    width: 150px;
+    height: 150px;
+  }
+
+  .homeButton {
+    width: 150px;
+    height: 150px;
+  }
+
+  li .iconBox img {
+    max-width: 80px;
+  }
 }
 /*---------------------------------------------------------------------------*/
-@media (min-width: 1750px) {
+@media (min-width: 1750px) and (max-width: 1949px) {
+  #tacHeader {
+    margin: -10% 0 0 18%;
+  }
+
   .homepageInfo {
     margin: 24em 0 0 0;
   }
 
   .slidingIcons {
-    left: 55%;
+    left: 6%;
+  }
+
+  .slidingIcons ul {
+    width: 80%;
   }
 
   button {
     border-radius: 15px;
   }
+
+  .iconBox {
+    width: 150px;
+    height: 150px;
+  }
+
+  .homeButton {
+    width: 150px;
+    height: 150px;
+  }
+
+  li .iconBox img {
+    max-width: 80px;
+  }
 }
 /*---------------------------------------------------------------------------*/
-@media (min-width: 1950px) {
+@media (min-width: 1950px) and (max-width: 2149px) {
+  #tacHeader {
+    margin: -10% 0 0 18%;
+  }
+
   .homepageInfo {
     margin: 24em 0 0 0;
   }
 
   .slidingIcons {
-    left: 70%;
+    left: -5%;
   }
 
   button {
     border-radius: 15px;
+  }
+
+  .iconBox {
+    width: 150px;
+    height: 150px;
+  }
+
+  .homeButton {
+    width: 150px;
+    height: 150px;
+  }
+
+  li .iconBox img {
+    max-width: 80px;
   }
 }
 /*---------------------------------------------------------------------------*/
 @media (min-width: 2150px) {
   #tacHeader {
     width: 90%;
-    margin: 0;
   }
 
   #tacHeader img {
@@ -1310,11 +1523,15 @@ li.iconBox img {
     margin: 24em 0 0 0;
   }
 
-  .slidingIcons {
-    left: 70%;
-  }
-
   button {
     border-radius: 15px;
+  }
+
+  .slidingIcons ul {
+    width: 80%;
+  }
+
+  #main > div > ul > li.iconBox.icon1.flex1 > a > span {
+    margin: 0;
   }
 }

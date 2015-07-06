@@ -227,48 +227,49 @@
 });
 }
 
-jQuery(document).ready(function(){
+jQuery(document).ready(function($){
 								
 //jQuery("#onetone-owl-slider").css({"min-height":391});
 //video background
 								
 if(typeof onetone_bigvideo !== 'undefined' && onetone_bigvideo!=null){
 for(var i=0;i<onetone_bigvideo.length;i++){
-jQuery(onetone_bigvideo[i].video_section_item).tubular(onetone_bigvideo[i].options);
+$(onetone_bigvideo[i].video_section_item).tubular(onetone_bigvideo[i].options);
    }
   }
   
-  jQuery(".home-wrapper .section").each(function(){
-	if(jQuery(this).find("#tubular-container").length > 0){
+  $(".home-wrapper .section").each(function(){
+	if($(this).find("#tubular-container").length > 0){
 		
-		jQuery(this).css({"height":(jQuery(window).height()-jQuery("header").height())+"px"});
-		jQuery(this).find("#tubular-container,#tubular-player").css({"height":(jQuery(window).height()-jQuery("header").height())+"px"});
+		$(this).css({"height":(jQuery(window).height()-$("header").height())+"px"});
+		$(this).find("#tubular-container,#tubular-player").css({"height":(jQuery(window).height()-$("header").height())+"px"});
 
 		}						
  });
  
 // BACK TO TOP 											
- jQuery(window).scroll(function(){
-		if(jQuery(window).scrollTop() > 200){
-			jQuery("#back-to-top").fadeIn(200);
+ $(window).scroll(function(){
+		if($(window).scrollTop() > 200){
+			$("#back-to-top").fadeIn(200);
 		} else{
-			jQuery("#back-to-top").fadeOut(200);
+			$("#back-to-top").fadeOut(200);
 		}
 	});
 	
-  	jQuery('#back-to-top, .back-to-top').click(function() {
-		  jQuery('html, body').animate({ scrollTop:0 }, '800');
+  	$('#back-to-top, .back-to-top').click(function() {
+		  $('html, body').animate({ scrollTop:0 }, '800');
 		  return false;
 	});
 	
 /* ------------------------------------------------------------------------ */
 /* parallax background image 										  	    */
 /* ------------------------------------------------------------------------ */
-	 jQuery('.onetone-parallax').parallax("50%", 0.1);
+ $('.onetone-parallax').parallax("50%", 0.1);
 
 /* ------------------------------------------------------------------------ */
 /*  sticky header             	  								  	    */
 /* ------------------------------------------------------------------------ */
 	
- jQuery('.home-header').sticky({'scrollSpeed' : 1000 });
+ $('.home-header').sticky({'scrollSpeed' : 1000 });
+ 
  });

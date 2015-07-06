@@ -324,16 +324,22 @@ li.iconBox img {
     text-decoration: none;
 }
 /*-------------------------------------------- test page 3 -----------------------------------------------------------*/
-#mainTest {width:100%;}
+.box {
+			  width: 100px;
+			  height: 100px;
 
-#mylogo{
-    border:1px solid red;
-    width:200px;
-    height:100px;
-    display:block;
-    position:relative;
-    //left: -300px
-} 
+			  background: #FFF;
+			  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+
+			  will-change: transform;
+			}
+.hidden{
+ display:none;
+ width: 500px;
+ height: 500px;
+ background: blue;
+        
+}
 /*--------------------------------------------------------light box ----------------------------------------------------*/
 #lightbox{
 	background-color:#eee;

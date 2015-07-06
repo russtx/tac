@@ -24,11 +24,11 @@ get_header(); ?>
                     
           <div class="slidingIcons flex-container">
             <ul>
-                <li class="iconBox icon1 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/Interior-Icon_50.png'><h4>Interior</h4></button></a></li>
-                <li class="iconBox icon2 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/Exterior_50.png'><h4>Exterior</h4></button></a></li>
-                <li class="iconBox icon3 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/12-Volt_50.png'><h4>12 Volt</h4></button></a></li>
-                <li class="iconBox icon4 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/TowPackage_50.png'><h4>Tow Package</h4></button></a></li>
-                <li class="iconBox icon5 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/SprayLiner_50.png'><h4>Spray Liner</h4></button></a></li>
+                <li class="iconBox icon1 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/Interior-Icon.png'></button><span>Interior</span></a></li>
+                <li class="iconBox icon2 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/Exterior.png'></button>Exterior</a></li>
+                <li class="iconBox icon3 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/07/12-Volt2.png'></button>12 Volt</a></li>
+                <li class="iconBox icon4 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/TowPackage.png'></button>Tow Package</a></li>
+                <li class="iconBox icon5 flex1"><a href="#"><button class="homeButton"><img src='http://localhost/totalacccenter/wp-content/uploads/2015/06/SprayLiner.png'></button>Spray Liner</a></li>
             </ul>
         </div>
 

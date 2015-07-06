@@ -117,6 +117,8 @@ function custom_built_for_tac_scripts() {
         wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' );
 
 	wp_enqueue_script( 'custom-built-for-tac-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+        
+        wp_enqueue_script( 'custom-built-for-tac', get_template_directory_uri() . '/js/hidden.js', array(), true );
 
 	wp_enqueue_script( 'custom-built-for-tac-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -168,4 +170,11 @@ function my_theme_wrapper_end() {
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
    add_theme_support( 'woocommerce' );
+}
+//jQuery Insert From Google
+if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
+function my_jquery_enqueue() {
+   wp_deregister_script('jquery');
+   wp_register_script('jquery', "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", false, null);
+   wp_enqueue_script('jquery');
 }
